@@ -1,0 +1,8 @@
+{
+  "bot_token": "INSERT_TOKEN_OVER",
+  "chat_id": "INSERT_CHAT_ID",
+  "macs":
+    {
+      "INSERT_DEVICE_NAME": "INSERT_DEVICE_MAC"
+    }
+}

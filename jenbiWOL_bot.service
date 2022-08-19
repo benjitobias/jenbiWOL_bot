@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot to send WOL magic packets
+After=network-online.target
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/pi/jenbiWOL_bot/venv/bin/python3.5 /home/pi/jenbiWOL_bot/main.py /home/pi/jenbiWOL_bot/config.json
+#RootDirectory=/home/pi/jenbi/jenbiWOL_bot
+
+
+[Install]
+WantedBy=network-online.target
+WantedBy=multi-user.target
