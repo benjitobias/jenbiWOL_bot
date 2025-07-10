@@ -30,6 +30,7 @@ class WolBot(object):
         self.log.setLevel(LOG_LEVEL)
 
         self.log.info('[*] Started jenbiWOL_bot')
+        self.bot.sendMessage(CHAT_ID, 'Started')
 
     def run_forever(self):
         MessageLoop(self.bot, {'chat': self.on_chat_message,
@@ -63,6 +64,7 @@ class WolBot(object):
         if chat_id == CHAT_ID:
             send_magic_packet(query_data)
             self.bot.answerCallbackQuery(query_id, text='WOL packet sent')
+            self.bot.sendMessage(CHAT_ID, query_data)
 
 
 def main():
